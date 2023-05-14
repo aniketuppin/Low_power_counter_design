@@ -1,0 +1,31 @@
+| units: 100 tech: scmos format: MIT
+p a a_2_42# a_10_42# 2 16 8 42
+p b a_10_42# a_2_42# 2 16 16 42
+n a_n25_22# vss a_8_11# 2 12 6 11
+n a_10_42# vss out 2 4 46 22
+n b a_12_11# a_10_42# 2 12 14 11
+p a_10_42# vdd out 2 8 46 42
+n sleep vss a_n25_22# 2 4 -26 22
+p sleep vdd a_n25_22# 2 8 -26 42
+p sleep vdd a_2_42# 2 16 0 42
+n a a_8_11# a_12_11# 2 12 10 11
+C vdd a_10_42# 3.05
+C vdd sleep 6.99
+R a_12_11# 160
+R a_8_11# 160
+C vss GND 38.54
+R vss 855
+C out GND 2.07
+R out 120
+C a_10_42# GND 15.91
+R a_10_42# 607
+R a_2_42# 500
+C a_n25_22# GND 10.27
+R a_n25_22# 466
+C b GND 7.69
+R b 583
+C a GND 6.98
+R a 632
+C sleep GND 10.22
+R sleep 954
+R vdd 11121

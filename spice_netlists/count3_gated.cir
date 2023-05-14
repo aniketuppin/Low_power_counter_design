@@ -1,0 +1,152 @@
+.include ./65nm_bulk.txt
+
+*defining subcircuits
+.subckt inv inp output vdd
+mi_p output inp vdd vdd cmosp l=65n w=130n
+mi_n output inp 0 0 cmosn l=65n w=260n
+.ends inv
+
+*inverter
+.subckt inv_gate inp slp slp_n output vdd
+m1 a1 slp vdd vdd cmosp l=65n w= 520n
+m2 output inp a1 a1 cmosp l=65n w=520n
+m3 output inp a2 a2 cmosn l=65n w=260n 
+m4 a2 slp_n 0 0 cmosn l=65n w=260n
+*Cdp a1 0 10n
+.ends inv_gate
+
+*nand gates
+.subckt nand_gate inp1 inp2 slp slp_n output vdd
+mn0 nand2 slp_n 0 0 cmosn l=65n w=390n
+mnA output inp1 nand1 nand1 CMOSN l=65n w=390n
+mnB nand1 inp2 nand2 nand2 CMOSN l=65n w=390n
+
+mp0 nand3 slp vdd vdd cmosp l=65n w=520n
+mpA output inp1 nand3 nand3 CMOSP w=520n l=65n
+mpB output inp2 nand3 nand3 CMOSP w=520n l=65n
+*Cdp nand3 0 10n
+.ends nand_gate
+
+*and gate
+.subckt and_gate inp1 inp2 slp slp_n output vdd
+mn0 nand2 slp_n 0 0 cmosn l=65n w=390n
+mnA out_n inp1 nand1 nand1 CMOSN l=65n w=390n
+mnB nand1 inp2 nand2 nand2 CMOSN l=65n w=390n
+
+mp0 nand3 slp vdd vdd cmosp l=65n w=520n
+mpA out_n inp1 nand3 nand3 CMOSP l=65n w=520n
+mpB out_n inp2 nand3 nand3 CMOSP l=65n w=520n
+
+Xin out_n slp slp_n output vdd inv_gate
+*Cdp nand3 0 10n
+.ends and_gate
+
+*xor gates
+.subckt xor_gate inA inB slp slp_n out vdd
+mnA out inA ab 0 CMOSN w=390n l=65n
+mnB ab inB x1 x1 CMOSN w=390n l=65n
+mns x1 slp_n 0 0 CMOSN w=390n l=65n
+X1 inA an vdd inv
+X2 inB bn vdd inv
+mnaa out an anbn 0 CMOSN w=390n l=65n
+mnbb anbn bn x1 x1 CMOSN w=390n l=65n
+*pun network
+mpA x inA x2 x2 CMOSP w=780n l=65n
+mpB x inB x2 x2 CMOSP w=780n l=65n
+mpsn x2 slp vdd vdd cmosp w=780n l=65n
+mpaa out an x x CMOSP w=780n l=65n
+mpbb out bn x x CMOSP w=780n l=65n
+*Cdp x2 0 10n
+.ends xor_gate
+
+*.subckt clk_gate a,a_n,b,b_n,clk,clk_eff vdd
+*mn1 node1 b a 0 CMOSN l=65n w=260n
+*mn2 node1 b_n a_n 0 CMOSN l=65n w=260n
+*mn3 node2 b a_n 0 CMOSN l=65n w=260n
+*mn4 node2 b_n a 0 CMOSN l=65n w=260n
+*mp clk node1 clk_eff vdd CMOSP l=65n w=520n
+*mn clk_eff node2 clk 0 CMOSN l=130n w=260n
+*.ends clk_gate
+
+Xs slp slp_n vdd inv
+
+*d flip-flops
+.subckt dff d clk slp slp_n out out_n vdd 
+Xck clk clk_n vdd inv
+Xd  d d_n vdd inv
+
+X1 d clk slp slp_n 1 vdd nand_gate
+X2 d_n clk slp slp_n 2 vdd nand_gate
+X3 1 4 slp slp_n 3 vdd nand_gate
+X4 2 3 slp slp_n 4 vdd nand_gate
+X5 3 clk_n slp slp_n 5 vdd nand_gate
+X6 4 clk_n slp slp_n 6 vdd nand_gate
+X7 5 out_n slp slp_n out vdd nand_gate
+X8 6 out slp slp_n out_n vdd nand_gate
+.ends dff
+
+*instantiating counter gates
+* 0th flip flop
+Xdf0 q0_n clk slp slp_n q0 q0_n vdd dff
+
+* 1st flip flop
+Xxor1 q0 q1 slp slp_n d1 vdd xor_gate
+Xgx1 d1 q1 slp slp_n p1 vcc xor_gate
+Xga1 p1 clk slp slp_n clk_eff1 vcc and_gate
+Xdf1 d1 clk_eff1 slp slp_n q1 q1_n vdd dff
+
+* 2nd flip flop
+Xand2 qo q1 slp slp_n c2 vdd and_gate
+Xxor2 q2 c2 slp slp_n d2 vdd xor_gate
+Xgx2 d2 q2 slp slp_n p2 vcc xor_gate
+Xga2 p2 clk_eff1 slp slp_n clk_eff2 vcc and_gate
+Xdf2 d2 clk_eff2 slp slp_n q2 q2_n vdd dff
+
+*defining inputs
+v_dd vdd 0 dc 1.5
+v_cc vcc 0 dc 1.5
+v_slp slp 0 dc 0
+v_clk clk 0 pulse (0 1.5 0 0.01n 0.01n 1n 2n)
+*v_slp slp 0 pulse(1.5 0 0 0.1n 0.1n 20n 30n)
+
+
+.tran 0.1n 30n
+
+.control 
+run
+
+meas tran Vmax MAX q2 from=5n to=10n
+meas tran Vmin MIN q2 from=13n to=17n
+
+Let v10 =Vmin + 0.1*(Vmax-Vmin)
+Let v50 =Vmin + 0.5*(Vmax-Vmin)
+Let v90 =Vmin +0.9*(Vmax-Vmin)
+Let   P= -1.5*(v_dd#branch)
+
+
+meas tran trise trig q2 val=v10 rise=1 targ q2 val=v90 rise=1
+meas tran tfall trig q2 val=v90 fall=1 targ q2 val= v10 fall=1
+meas tran p_avg AVG P from=1n to=30n
+*meas tran energy integ P
+meas tran tphl trig clk_eff2 val=0.75 fall=2 targ q2 val=v50 fall=1
+meas tran tplh trig clk_eff2 val=0.75 fall=1 targ q2 val=v50 rise=1
+
+Let tp= (tphl+tplh)/2
+
+print tp
+
+plot clk  title clk
+plot clk_eff1 title clk1
+plot clk_eff2 title clk2
+plot clk clk_eff1 clk_eff2 title clocks
+
+plot q0 title dff0
+plot q1 title dff1
+plot q2 title dff2
+plot q0 q1 q2 title all_outputs
+plot clk q0 q1 q2 title clk_input_and_output
+*plot clk_eff1 q0 q1
+*plot slp  out title sleep_input_and_output
+.endc
+
+.end

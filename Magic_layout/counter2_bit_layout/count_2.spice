@@ -1,0 +1,296 @@
+* SPICE3 file created from count_2.ext - technology: scmos
+
+.option scale=1u
+
+M1000 a_83_155# out_1 desn Gnd nfet w=12 l=2
++  ad=60 pd=34 as=72 ps=36
+M1001 a_n336_102# sleep vdd_14 vdd_14 pfet w=8 l=2
++  ad=48 pd=28 as=128 ps=70
+M1002 a_n137_181# sleep vss_16 Gnd nfet w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1003 a_92_46# clk a_84_46# vdd_10 pfet w=16 l=2
++  ad=96 pd=44 as=176 ps=86
+M1004 desn a_19_126# a_66_181# vdd_8 pfet w=24 l=2
++  ad=144 pd=60 as=288 ps=120
+M1005 a_236_159# d2 a_228_159# vdd_1 pfet w=16 l=2
++  ad=96 pd=44 as=176 ps=86
+M1006 a_n78_125# out_1 vss_19 Gnd nfet w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1007 a_n207_183# a_n238_194# vss_13 Gnd nfet w=12 l=2
++  ad=24 pd=28 as=96 ps=56
+M1008 out_0 a_n303_214# a_n213_214# vdd_13 pfet w=16 l=2
++  ad=96 pd=44 as=176 ps=86
+M1009 a_238_128# d2 a_234_128# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=24 ps=28
+M1010 a_n203_183# a_n303_214# a_n207_183# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=0 ps=0
+M1011 a_n85_153# out_0 a_n93_153# vdd_18 pfet w=24 l=2
++  ad=288 pd=120 as=264 ps=118
+M1012 a_206_47# sleep vss_3 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=96 ps=56
+M1013 a_n213_214# d out_0 vdd_13 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 a_234_128# a_203_139# vss_1 Gnd nfet w=12 l=2
++  ad=0 pd=0 as=96 ps=56
+M1015 out_0 d a_n203_183# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=0 ps=0
+M1016 a_n78_125# out_1 vdd_19 vdd_19 pfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1017 a_237_36# a_206_47# vss_3 Gnd nfet w=12 l=2
++  ad=24 pd=28 as=0 ps=0
+M1018 a_n137_181# sleep vdd_16 vdd_16 pfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1019 a_14_209# sleep vss_6 Gnd nfet w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1020 a_304_139# sleep vss_2 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=96 ps=56
+M1021 d2 a_n78_125# a_n80_127# Gnd nfet w=12 l=2
++  ad=72 pd=36 as=24 ps=28
+M1022 a_206_47# sleep vdd_3 vdd_3 pfet w=8 l=2
++  ad=48 pd=28 as=128 ps=70
+M1023 a_n207_91# a_n238_102# vss_15 Gnd nfet w=12 l=2
++  ad=24 pd=28 as=96 ps=56
+M1024 a_339_36# a_239_67# a_335_36# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=24 ps=28
+M1025 a_19_126# d2 vss_7 Gnd nfet w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1026 a_14_209# sleep vdd_6 vdd_6 pfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1027 a_58_181# out_1 a_66_181# vdd_8 pfet w=24 l=2
++  ad=264 pd=118 as=0 ps=0
+M1028 a_304_139# sleep vdd_2 vdd_2 pfet w=8 l=2
++  ad=48 pd=28 as=128 ps=70
+M1029 a_63_155# d2 a_83_155# Gnd nfet w=12 l=2
++  ad=132 pd=70 as=0 ps=0
+M1030 a_19_126# d2 vdd_7 vdd_7 pfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1031 a_66_181# a_73_153# desn vdd_8 pfet w=24 l=2
++  ad=0 pd=0 as=0 ps=0
+M1032 a_228_159# gated_clk a_236_159# vdd_1 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1033 a_90_15# a_57_26# vss_10 Gnd nfet w=12 l=2
++  ad=24 pd=28 as=120 ps=76
+M1034 a_337_67# a_239_67# a_329_67# vdd_4 pfet w=16 l=2
++  ad=96 pd=44 as=176 ps=86
+M1035 a_n376_145# d vdd_11 vdd_11 pfet w=12 l=2
++  ad=72 pd=36 as=72 ps=36
+M1036 a_n213_214# sleep vdd_13 vdd_13 pfet w=16 l=2
++  ad=0 pd=0 as=128 ps=70
+M1037 a_n238_194# sleep vss_13 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1038 a_n93_153# sleep vdd_18 vdd_18 pfet w=24 l=2
++  ad=0 pd=0 as=120 ps=58
+M1039 a_231_67# gated_clk a_239_67# vdd_3 pfet w=16 l=2
++  ad=176 pd=86 as=96 ps=44
+M1040 a_236_159# gated_clk a_238_128# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=0 ps=0
+M1041 a_n305_183# a_n336_194# vss_12 Gnd nfet w=12 l=2
++  ad=24 pd=28 as=96 ps=56
+M1042 a_n303_214# d a_n311_214# vdd_12 pfet w=16 l=2
++  ad=96 pd=44 as=176 ps=86
+M1043 a_329_159# sleep vdd_2 vdd_2 pfet w=16 l=2
++  ad=176 pd=86 as=0 ps=0
+M1044 a_n88_127# a_n137_181# vss_18 Gnd nfet w=12 l=2
++  ad=132 pd=70 as=120 ps=44
+M1045 a_n301_183# d a_n305_183# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=0 ps=0
+M1046 a_n303_214# clk a_n301_183# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=0 ps=0
+M1047 a_n311_214# clk a_n303_214# vdd_12 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1048 a_n80_127# a_n132_98# a_n88_127# Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1049 a_n238_194# sleep vdd_13 vdd_13 pfet w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1050 d a_n303_122# a_n213_122# vdd_15 pfet w=16 l=2
++  ad=96 pd=44 as=176 ps=86
+M1051 a_160_90# d2 vss_5 Gnd nfet w=6 l=2
++  ad=42 pd=26 as=42 ps=26
+M1052 a_304_47# sleep vss_4 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=96 ps=56
+M1053 a_n213_122# out_0 d vdd_15 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1054 a_84_46# desn a_92_46# vdd_10 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1055 a_335_36# a_304_47# vss_4 Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1056 a_n203_91# a_n303_122# a_n207_91# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=0 ps=0
+M1057 a_304_47# sleep vdd_4 vdd_4 pfet w=8 l=2
++  ad=48 pd=28 as=128 ps=70
+M1058 a_239_67# gated_clk a_241_36# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=24 ps=28
+M1059 a_160_90# d2 vdd_5 vdd_5 pfet w=12 l=2
++  ad=72 pd=36 as=72 ps=36
+M1060 gated_clk a_92_46# vss_10 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1061 a_n305_91# a_n336_102# vss_14 Gnd nfet w=12 l=2
++  ad=24 pd=28 as=96 ps=56
+M1062 a_231_67# sleep vdd_3 vdd_3 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1063 out_1 a_236_159# a_329_159# vdd_2 pfet w=16 l=2
++  ad=96 pd=44 as=0 ps=0
+M1064 a_n311_214# sleep vdd_12 vdd_12 pfet w=16 l=2
++  ad=0 pd=0 as=128 ps=70
+M1065 a_n336_194# sleep vss_12 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1066 a_71_155# a_19_126# a_63_155# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=0 ps=0
+M1067 gated_clk a_92_46# vdd_10 vdd_10 pfet w=8 l=2
++  ad=48 pd=28 as=176 ps=98
+M1068 a_339_128# a_236_159# a_335_128# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=24 ps=28
+M1069 a_n376_145# d vss_11 Gnd nfet w=6 l=2
++  ad=42 pd=26 as=42 ps=26
+M1070 a_335_128# a_304_139# vss_2 Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1071 a_63_155# a_14_209# vss_8 Gnd nfet w=12 l=2
++  ad=0 pd=0 as=120 ps=44
+M1072 a_58_181# sleep vdd_8 vdd_8 pfet w=24 l=2
++  ad=0 pd=0 as=120 ps=58
+M1073 a_n213_122# sleep vdd_15 vdd_15 pfet w=16 l=2
++  ad=0 pd=0 as=128 ps=70
+M1074 a_84_46# sleep vdd_10 vdd_10 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1075 a_203_139# sleep vss_1 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1076 a_92_46# desn a_94_15# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=24 ps=28
+M1077 a_329_67# out_1 a_337_67# vdd_4 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1078 a_n336_194# sleep vdd_12 vdd_12 pfet w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1079 a_n132_98# out_0 vss_17 Gnd nfet w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1080 a_n238_102# sleep vss_15 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1081 a_n303_122# a_n376_145# a_n311_122# vdd_14 pfet w=16 l=2
++  ad=96 pd=44 as=176 ps=86
+M1082 a_203_139# sleep vdd_1 vdd_1 pfet w=8 l=2
++  ad=48 pd=28 as=128 ps=70
+M1083 a_n93_153# out_1 a_n85_153# vdd_18 pfet w=24 l=2
++  ad=0 pd=0 as=0 ps=0
+M1084 a_n311_122# clk a_n303_122# vdd_14 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1085 a_n88_127# out_0 a_n68_127# Gnd nfet w=12 l=2
++  ad=0 pd=0 as=60 ps=34
+M1086 a_n238_102# sleep vdd_15 vdd_15 pfet w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1087 d out_0 a_n203_91# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=0 ps=0
+M1088 a_329_159# a_337_67# out_1 vdd_2 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1089 desn a_73_153# a_71_155# Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1090 a_n301_91# a_n376_145# a_n305_91# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=0 ps=0
+M1091 out_1 a_337_67# a_339_128# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=0 ps=0
+M1092 a_73_153# out_1 vss_9 Gnd nfet w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1093 a_228_159# sleep vdd_1 vdd_1 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1094 a_66_181# d2 a_58_181# vdd_8 pfet w=24 l=2
++  ad=0 pd=0 as=0 ps=0
+M1095 a_241_36# a_160_90# a_237_36# Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1096 a_337_67# out_1 a_339_36# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=0 ps=0
+M1097 a_n303_122# clk a_n301_91# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=0 ps=0
+M1098 a_57_26# sleep vss_10 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1099 a_73_153# out_1 vdd_9 vdd_9 pfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1100 d2 a_n132_98# a_n85_153# vdd_18 pfet w=24 l=2
++  ad=144 pd=60 as=0 ps=0
+M1101 a_329_67# sleep vdd_4 vdd_4 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1102 a_n311_122# sleep vdd_14 vdd_14 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1103 a_239_67# a_160_90# a_231_67# vdd_3 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1104 a_n85_153# a_n78_125# d2 vdd_18 pfet w=24 l=2
++  ad=0 pd=0 as=0 ps=0
+M1105 a_94_15# clk a_90_15# Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1106 a_57_26# sleep vdd_10 vdd_10 pfet w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1107 a_n68_127# out_1 d2 Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1108 a_n336_102# sleep vss_14 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1109 a_n132_98# out_0 vdd_17 vdd_17 pfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+C0 vdd_19 out_1 8.65fF
+C1 vdd_17 out_0 6.27fF
+C2 vdd_18 a_n78_125# 7.30fF
+C3 vdd_4 sleep 15.00fF
+C4 vdd_13 d 4.37fF
+C5 d2 vdd_5 5.32fF
+C6 sleep vdd_13 15.72fF
+C7 vdd_10 clk 4.37fF
+C8 vdd_11 d 5.32fF
+C9 sleep vdd_15 15.00fF
+C10 sleep vdd_8 4.37fF
+C11 a_73_153# vdd_8 7.30fF
+C12 vdd_3 gated_clk 4.37fF
+C13 a_n85_153# a_n93_153# 2.26fF
+C14 a_66_181# a_58_181# 2.26fF
+C15 sleep vdd_2 15.72fF
+C16 sleep vdd_6 6.27fF
+C17 vdd_1 sleep 22.46fF
+C18 sleep vdd_16 7.46fF
+C19 vdd_10 a_92_46# 3.05fF
+C20 out_1 vdd_9 2.86fF
+C21 vdd_7 d2 6.27fF
+C22 sleep vdd_14 6.99fF
+C23 desn vdd_10 4.37fF
+C24 sleep vdd_3 6.99fF
+C25 vdd_14 clk 4.37fF
+C26 sleep vdd_12 20.24fF
+C27 sleep vdd_18 4.37fF
+C28 sleep vdd_10 6.99fF
+C29 vss_4 Gnd 7.52fF
+C30 vss_10 Gnd 25.00fF
+C31 vss_3 Gnd 6.77fF
+C32 a_92_46# Gnd 6.67fF
+C33 a_57_26# Gnd 10.27fF
+C34 a_239_67# Gnd 23.88fF
+C35 vss_5 Gnd 9.02fF
+C36 vss_17 Gnd 9.40fF
+C37 vss_2 Gnd 7.52fF
+C38 vss_1 Gnd 8.65fF
+C39 vss_15 Gnd 24.25fF
+C40 vss_14 Gnd 24.25fF
+C41 vss_18 Gnd 5.83fF
+C42 vss_19 Gnd 9.40fF
+C43 a_337_67# Gnd 8.46fF
+C44 a_236_159# Gnd 18.05fF
+C45 vss_8 Gnd 15.23fF
+C46 gated_clk Gnd 19.18fF
+C47 vss_9 Gnd 9.40fF
+C48 a_n238_102# Gnd 9.65fF
+C49 a_n303_122# Gnd 38.99fF
+C50 a_n336_102# Gnd 9.65fF
+C51 desn Gnd 3.34fF
+C52 a_19_126# Gnd 20.24fF
+C53 vss_6 Gnd 9.40fF
+C54 a_73_153# Gnd 5.72fF
+C55 a_14_209# Gnd 20.30fF
+C56 d2 Gnd 20.21fF
+C57 vss_11 Gnd 9.02fF
+C58 a_n132_98# Gnd 20.24fF
+C59 vss_16 Gnd 9.40fF
+C60 a_n376_145# Gnd 9.21fF
+C61 a_n78_125# Gnd 7.94fF
+C62 a_n137_181# Gnd 18.18fF
+C63 vss_13 Gnd 24.25fF
+C64 vss_12 Gnd 21.62fF
+C65 out_0 Gnd 99.74fF
+C66 a_n238_194# Gnd 9.65fF
+C67 out_1 Gnd 16.81fF
+C68 a_n303_214# Gnd 38.99fF
+C69 clk Gnd 10.47fF
+C70 sleep Gnd 333.78fF
+C71 d Gnd 30.39fF

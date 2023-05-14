@@ -1,0 +1,45 @@
+*dff
+.include ./65nm_bulk.txt
+
+.subckt inv inp output vdd
+mp output inp vdd vdd CMOSP w=260n l=65n
+mn output inp 0 0 CMOSN w=130n l=65n
+.ends inv
+
+.subckt dff d clk q q_n vdd 
+
+mp1 1 d vdd vdd CMOSP w=520n l=65n
+mp2 2 clk 1 vdd CMOSP w=260n l=65n
+mn3 2 d 0 0 CMOSN w=260n l=65n
+mp4 3 clk vdd vdd CMOSP w=520n l=65n
+mn5 3 2 4 0 CMOSN w=130n l=65n
+mn6 4 clk 0 0 CMOSN w=260n l=65n
+mp7 q_n 3 vdd vdd CMOSP w=520n l=65n
+mn8 q_n clk 8 0 CMOSN w=130n l=65n
+mn9 8 3 0 0 CMOSN w=260n l=65n
+mp10 q q_n vdd vdd CMOSP w=520n l=65n
+mn11 q q_n 0 0 CMOSN w=260n l=65n
+.ends dff
+
+v_dd vdd 0 dc 0.9
+*v_slp slp 0 dc 0
+v_clk clk 0 pulse (0 0.9 0 0.1n 0.1n 10n 20n)
+*v_slp slp 0 pulse(0 1.8 0 0.1n 0.1n 50n 100n)
+v_d d 0 PWL(0 0 25n 0 25.1n 0.9 85n 0.9 85.1n 0 105n 0 105.1n 0.9)
+
+*Xsl slp slp_n vdd inv
+Xd d clk q q_n vdd dff
+.tran 0.1n 130n
+
+
+.control 
+run
+*plot slp slp_n title sleep
+plot clk title clock
+plot d title input_d
+plot q  title outputs
+plot q_n
+plot d clk q title clk_input_and_output
+*plot slp d q title sleep_input_and_output
+.endc
+.end

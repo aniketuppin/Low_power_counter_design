@@ -1,0 +1,53 @@
+* SPICE3 file created from xor_stt.ext - technology: scmos
+
+.option scale=1u
+
+M1000 a_55_71# a_62_43# out vdd pfet w=24 l=2
++  ad=288 pd=120 as=144 ps=60
+M1001 a_62_43# a vdd_3 vdd_3 pfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1002 a_60_45# a_8_16# a_52_45# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=132 ps=70
+M1003 a_72_45# a out Gnd nfet w=12 l=2
++  ad=60 pd=34 as=72 ps=36
+M1004 a_55_71# b a_47_71# vdd pfet w=24 l=2
++  ad=0 pd=0 as=264 ps=118
+M1005 a_47_71# a a_55_71# vdd pfet w=24 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 a_52_45# b a_72_45# Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 a_3_99# sleep vdd_1 vdd_1 pfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+M1008 out a_8_16# a_55_71# vdd pfet w=24 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 a_3_99# sleep vss_1 Gnd nfet w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1010 a_52_45# a_3_99# vss Gnd nfet w=12 l=2
++  ad=0 pd=0 as=120 ps=44
+M1011 out a_62_43# a_60_45# Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1012 a_47_71# sleep vdd vdd pfet w=24 l=2
++  ad=0 pd=0 as=120 ps=58
+M1013 a_8_16# b vss_2 Gnd nfet w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1014 a_62_43# a vss_3 Gnd nfet w=4 l=2
++  ad=28 pd=22 as=28 ps=22
+M1015 a_8_16# b vdd_2 vdd_2 pfet w=8 l=2
++  ad=48 pd=28 as=48 ps=28
+C0 sleep vdd 4.37fF
+C1 b vdd_2 6.27fF
+C2 a vdd_3 2.86fF
+C3 a_55_71# a_47_71# 2.26fF
+C4 a_62_43# vdd 7.30fF
+C5 vdd_1 sleep 2.86fF
+C6 vss_2 Gnd 9.40fF
+C7 vss Gnd 15.23fF
+C8 vss_3 Gnd 9.40fF
+C9 out Gnd 5.22fF
+C10 a Gnd 8.10fF
+C11 a_8_16# Gnd 20.24fF
+C12 b Gnd 45.53fF
+C13 vss_1 Gnd 9.40fF
+C14 a_62_43# Gnd 5.72fF
+C15 a_3_99# Gnd 20.30fF
+C16 sleep Gnd 5.86fF

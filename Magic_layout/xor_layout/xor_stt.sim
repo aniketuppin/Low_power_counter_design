@@ -1,0 +1,54 @@
+| units: 100 tech: scmos format: MIT
+p a_62_43# out a_55_71# 2 24 69 71
+p a vdd_3 a_62_43# 2 8 110 80
+n a_8_16# a_52_45# a_60_45# 2 12 58 45
+n a out a_72_45# 2 12 70 45
+p b a_47_71# a_55_71# 2 24 53 71
+p a a_55_71# a_47_71# 2 24 77 71
+n b a_72_45# a_52_45# 2 12 77 45
+p sleep vdd_1 a_3_99# 2 8 1 119
+p a_8_16# a_55_71# out 2 24 61 71
+n sleep vss_1 a_3_99# 2 4 1 99
+n a_3_99# vss a_52_45# 2 12 50 45
+n a_62_43# a_60_45# out 2 12 62 45
+p sleep vdd a_47_71# 2 24 45 71
+n b vss_2 a_8_16# 2 4 6 16
+n a vss_3 a_62_43# 2 4 110 60
+p b vdd_2 a_8_16# 2 8 6 36
+C a_47_71# a_55_71# 2.26
+C vdd sleep 4.37
+C b vdd_2 6.27
+C vdd a_62_43# 7.30
+C vdd_3 a 2.86
+C sleep vdd_1 2.86
+C vss_2 GND 9.40
+R vss_2 107
+R a_72_45# 64
+R a_60_45# 160
+R a_52_45# 191
+C vss GND 15.23
+R vss 92
+C vss_3 GND 9.40
+R vss_3 107
+C out GND 5.22
+R out 292
+R a_55_71# 620
+R a_47_71# 661
+C a GND 8.10
+R a 1334
+C a_8_16# GND 20.24
+R a_8_16# 1057
+C b GND 45.53
+R b 2963
+C vss_1 GND 9.40
+R vss_1 107
+C a_62_43# GND 5.72
+R a_62_43# 1312
+C a_3_99# GND 20.30
+R a_3_99# 353
+C sleep GND 5.86
+R sleep 1297
+R vdd_2 3912
+R vdd_3 4058
+R vdd 4106
+R vdd_1 3633

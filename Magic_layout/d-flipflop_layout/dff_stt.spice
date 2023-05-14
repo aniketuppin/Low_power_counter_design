@@ -1,0 +1,95 @@
+* SPICE3 file created from dff_stt.ext - technology: scmos
+
+.option scale=1u
+
+M1000 a_123_n92# slp vss_3 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=96 ps=56
+M1001 a_221_n92# slp vss_4 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=96 ps=56
+M1002 a_123_0# slp vss_1 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=96 ps=56
+M1003 a_246_n72# out out_n vdd_4 pfet w=16 l=2
++  ad=176 pd=86 as=96 ps=44
+M1004 a_148_20# slp vdd_1 vdd_1 pfet w=16 l=2
++  ad=176 pd=86 as=128 ps=70
+M1005 a_221_0# slp vdd_2 vdd_2 pfet w=8 l=2
++  ad=48 pd=28 as=128 ps=70
+M1006 a_158_n103# d_n a_154_n103# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=24 ps=28
+M1007 a_246_20# out_n out vdd_2 pfet w=16 l=2
++  ad=176 pd=86 as=96 ps=44
+M1008 a_123_n92# slp vdd_3 vdd_3 pfet w=8 l=2
++  ad=48 pd=28 as=128 ps=70
+M1009 a_221_n92# slp vdd_4 vdd_4 pfet w=8 l=2
++  ad=48 pd=28 as=128 ps=70
+M1010 a_154_n103# a_123_n92# vss_3 Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 a_221_0# slp vss_2 Gnd nfet w=4 l=2
++  ad=24 pd=20 as=96 ps=56
+M1012 a_148_n72# slp vdd_3 vdd_3 pfet w=16 l=2
++  ad=176 pd=86 as=0 ps=0
+M1013 a_246_20# slp vdd_2 vdd_2 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 out_n out a_256_n103# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=24 ps=28
+M1015 d_n d vss Gnd nfet w=6 l=2
++  ad=42 pd=26 as=42 ps=26
+M1016 a_156_20# d a_148_20# vdd_1 pfet w=16 l=2
++  ad=96 pd=44 as=0 ps=0
+M1017 a_158_n11# d a_154_n11# Gnd nfet w=12 l=2
++  ad=24 pd=28 as=24 ps=28
+M1018 a_154_n11# a_123_0# vss_1 Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1019 a_156_n72# d_n a_148_n72# vdd_3 pfet w=16 l=2
++  ad=96 pd=44 as=0 ps=0
+M1020 a_256_n103# a_156_n72# a_252_n103# Gnd nfet w=12 l=2
++  ad=0 pd=0 as=24 ps=28
+M1021 a_246_n72# slp vdd_4 vdd_4 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1022 a_156_n72# clock a_158_n103# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=0 ps=0
+M1023 a_123_0# slp vdd_1 vdd_1 pfet w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1024 a_156_20# clock a_158_n11# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=0 ps=0
+M1025 out out_n a_256_n11# Gnd nfet w=12 l=2
++  ad=84 pd=38 as=24 ps=28
+M1026 a_148_n72# clock a_156_n72# vdd_3 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1027 a_252_n103# a_221_n92# vss_4 Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1028 out a_156_20# a_246_20# vdd_2 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1029 a_252_n11# a_221_0# vss_2 Gnd nfet w=12 l=2
++  ad=24 pd=28 as=0 ps=0
+M1030 a_256_n11# a_156_20# a_252_n11# Gnd nfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1031 a_148_20# clock a_156_20# vdd_1 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1032 out_n a_156_n72# a_246_n72# vdd_4 pfet w=16 l=2
++  ad=0 pd=0 as=0 ps=0
+M1033 d_n d vdd vdd pfet w=12 l=2
++  ad=72 pd=36 as=72 ps=36
+C0 vdd_3 slp 6.99fF
+C1 d vdd 5.32fF
+C2 vdd_4 slp 15.00fF
+C3 slp vdd_2 15.72fF
+C4 slp vdd_1 20.24fF
+C5 vdd_3 clock 4.37fF
+C6 vss_4 Gnd 21.62fF
+C7 vss_3 Gnd 20.87fF
+C8 a_221_n92# Gnd 9.65fF
+C9 a_156_n72# Gnd 2.26fF
+C10 a_123_n92# Gnd 9.65fF
+C11 vss Gnd 9.02fF
+C12 d_n Gnd 17.67fF
+C13 vss_2 Gnd 21.62fF
+C14 vss_1 Gnd 21.62fF
+C15 out Gnd 3.01fF
+C16 a_221_0# Gnd 9.65fF
+C17 out_n Gnd 3.01fF
+C18 a_156_20# Gnd 2.26fF
+C19 a_123_0# Gnd 9.70fF
+C20 clock Gnd 12.14fF
+C21 d Gnd 7.05fF
+C22 slp Gnd 7.05fF

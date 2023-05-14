@@ -1,0 +1,92 @@
+| units: 100 tech: scmos format: MIT
+n slp vss_3 a_123_n92# 2 4 121 -91
+n slp vss_4 a_221_n92# 2 4 219 -91
+n slp vss_1 a_123_0# 2 4 121 0
+p out out_n a_246_n72# 2 16 260 -71
+p slp vdd_1 a_148_20# 2 16 146 20
+p slp vdd_2 a_221_0# 2 8 219 20
+n d_n a_154_n103# a_158_n103# 2 12 156 -102
+p out_n out a_246_20# 2 16 260 20
+p slp vdd_3 a_123_n92# 2 8 121 -71
+p slp vdd_4 a_221_n92# 2 8 219 -71
+n a_123_n92# vss_3 a_154_n103# 2 12 152 -102
+n slp vss_2 a_221_0# 2 4 219 0
+p slp vdd_3 a_148_n72# 2 16 146 -71
+p slp vdd_2 a_246_20# 2 16 244 20
+n out a_256_n103# out_n 2 12 258 -102
+n d vss d_n 2 6 81 -48
+p d a_148_20# a_156_20# 2 16 154 20
+n d a_154_n11# a_158_n11# 2 12 156 -10
+n a_123_0# vss_1 a_154_n11# 2 12 152 -10
+p d_n a_148_n72# a_156_n72# 2 16 154 -71
+n a_156_n72# a_252_n103# a_256_n103# 2 12 254 -102
+p slp vdd_4 a_246_n72# 2 16 244 -71
+n clock a_158_n103# a_156_n72# 2 12 160 -102
+p slp vdd_1 a_123_0# 2 8 121 20
+n clock a_158_n11# a_156_20# 2 12 160 -10
+n out_n a_256_n11# out 2 12 258 -10
+p clock a_156_n72# a_148_n72# 2 16 162 -71
+n a_221_n92# vss_4 a_252_n103# 2 12 250 -102
+p a_156_20# a_246_20# out 2 16 252 20
+n a_221_0# vss_2 a_252_n11# 2 12 250 -10
+n a_156_20# a_252_n11# a_256_n11# 2 12 254 -10
+p clock a_156_20# a_148_20# 2 16 162 20
+p a_156_n72# a_246_n72# out_n 2 16 252 -71
+p d vdd d_n 2 12 81 -30
+C clock vdd_3 4.37
+C d vdd 5.32
+C slp vdd_1 20.24
+C vdd_2 slp 15.72
+C slp vdd_4 15.00
+C slp vdd_3 6.99
+R a_256_n103# 160
+R a_252_n103# 160
+C vss_4 GND 21.62
+R vss_4 508
+R a_158_n103# 160
+R a_154_n103# 160
+C vss_3 GND 20.87
+R vss_3 508
+R a_246_n72# 500
+C a_221_n92# GND 9.65
+R a_221_n92# 406
+C a_156_n72# GND 2.26
+R a_156_n72# 1030
+R a_148_n72# 500
+C a_123_n92# GND 9.65
+R a_123_n92# 406
+R a_256_n11# 160
+R a_252_n11# 160
+C vss GND 9.02
+R vss 91
+C d_n GND 17.67
+R d_n 975
+C vss_2 GND 21.62
+R vss_2 508
+R a_158_n11# 160
+R a_154_n11# 160
+C vss_1 GND 21.62
+R vss_1 508
+C out GND 3.01
+R out 1031
+R a_246_20# 500
+C a_221_0# GND 9.65
+R a_221_0# 406
+C out_n GND 3.01
+R out_n 1029
+C a_156_20# GND 2.26
+R a_156_20# 1030
+R a_148_20# 500
+C a_123_0# GND 9.70
+R a_123_0# 418
+C clock GND 12.14
+R clock 1909
+C d GND 7.05
+R d 2236
+C slp GND 7.05
+R slp 7458
+R vdd_4 7026
+R vdd_3 7026
+R vdd 3951
+R vdd_2 7026
+R vdd_1 7026

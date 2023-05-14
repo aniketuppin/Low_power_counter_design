@@ -1,0 +1,134 @@
+timestamp 1679571716
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_256_n103#" 160 0 256 -103 ndiff 24 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_252_n103#" 160 0 252 -103 ndiff 24 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vss_4" 508 24252 213 -92 ndiff 96 56 32 32 0 0 0 0 0 0 0 0 636 202 0 0 0 0
+node "a_158_n103#" 160 0 158 -103 ndiff 24 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_154_n103#" 160 0 154 -103 ndiff 24 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vss_3" 508 24252 115 -92 ndiff 96 56 32 32 0 0 0 0 0 0 0 0 636 202 0 0 0 0
+node "a_246_n72#" 500 0 246 -72 pdiff 0 0 176 86 0 0 0 0 0 0 0 0 80 48 0 0 0 0
+node "a_221_n92#" 406 9648 221 -92 ndiff 24 20 48 28 64 60 0 0 0 0 0 0 200 108 0 0 0 0
+node "a_156_n72#" 1030 38988 156 -72 pdiff 84 38 96 44 154 150 0 0 0 0 0 0 684 350 0 0 0 0
+node "a_148_n72#" 500 0 148 -72 pdiff 0 0 176 86 0 0 0 0 0 0 0 0 80 48 0 0 0 0
+node "a_123_n92#" 406 9648 123 -92 ndiff 24 20 48 28 64 60 0 0 0 0 0 0 200 108 0 0 0 0
+node "a_256_n11#" 160 0 256 -11 ndiff 24 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_252_n11#" 160 0 252 -11 ndiff 24 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vss" 91 9024 74 -49 ndiff 42 26 16 16 0 0 0 0 0 0 0 0 232 92 0 0 0 0
+node "d_n" 975 38988 83 -49 ndiff 42 26 72 36 154 150 0 0 0 0 0 0 704 360 0 0 0 0
+node "vss_2" 508 24252 213 0 ndiff 96 56 32 32 0 0 0 0 0 0 0 0 636 202 0 0 0 0
+node "a_158_n11#" 160 0 158 -11 ndiff 24 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_154_n11#" 160 0 154 -11 ndiff 24 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vss_1" 508 25004 115 0 ndiff 96 56 32 32 0 0 0 0 0 0 0 0 636 202 0 0 0 0
+node "out" 1031 51584 254 20 pdiff 84 38 96 44 154 150 0 0 0 0 0 0 944 480 0 0 0 0
+node "a_246_20#" 500 0 246 20 pdiff 0 0 176 86 0 0 0 0 0 0 0 0 80 48 0 0 0 0
+node "a_221_0#" 406 9648 221 0 ndiff 24 20 48 28 64 60 0 0 0 0 0 0 200 108 0 0 0 0
+node "out_n" 1029 34100 254 -72 pdiff 84 38 96 44 154 150 0 0 0 0 0 0 572 294 0 0 0 0
+node "a_156_20#" 1030 38988 156 20 pdiff 84 38 96 44 154 150 0 0 0 0 0 0 684 350 0 0 0 0
+node "a_148_20#" 500 0 148 20 pdiff 0 0 176 86 0 0 0 0 0 0 0 0 80 48 0 0 0 0
+node "a_123_0#" 418 9698 123 0 ndiff 24 20 48 28 66 62 0 0 0 0 0 0 196 106 0 0 0 0
+node "clock" 1909 22532 156 -36 pc 0 0 0 0 336 332 0 0 0 0 0 0 16 16 0 0 0 0
+node "d" 2236 32438 69 -41 pc 0 0 0 0 422 402 0 0 0 0 0 0 16 16 0 0 0 0
+node "slp" 7458 73542 109 6 pc 0 0 0 0 1298 1278 0 0 0 0 0 0 16 16 0 0 0 0
+node "vdd_4" 7026 0 207 -80 nw 48 48 128 70 0 0 0 0 0 0 0 0 644 206 0 0 2328 214
+node "vdd_3" 7026 0 109 -80 nw 48 48 128 70 0 0 0 0 0 0 0 0 644 206 0 0 2328 214
+node "vdd" 3951 0 69 -35 nw 16 16 72 36 0 0 0 0 0 0 0 0 232 92 0 0 1107 136
+node "vdd_2" 7026 0 207 12 nw 48 48 128 70 0 0 0 0 0 0 0 0 644 206 0 0 2328 214
+node "vdd_1" 7026 0 109 12 nw 48 48 128 70 0 0 0 0 0 0 0 0 644 206 0 0 2328 214
+cap "a_156_20#" "vdd_1" 188
+cap "slp" "vdd_1" 20236
+cap "d_n" "vss_3" 480
+cap "a_148_20#" "vdd_1" 752
+cap "vdd_2" "a_221_0#" 1504
+cap "slp" "vdd_4" 15004
+cap "vss_2" "a_156_20#" 480
+cap "vdd_3" "a_148_n72#" 752
+cap "vss_2" "slp" 480
+cap "clock" "vdd_1" 1194
+cap "slp" "d_n" 240
+cap "vdd_4" "out_n" 188
+cap "vss_2" "out_n" 480
+cap "a_246_20#" "vdd_2" 752
+cap "slp" "vss_3" 480
+cap "a_156_n72#" "vss_4" 480
+cap "vdd_4" "out" 1194
+cap "vdd_1" "d" 1194
+cap "a_246_20#" "out" 1128
+cap "vdd_3" "d_n" 1194
+cap "vdd_4" "a_246_n72#" 752
+cap "slp" "a_156_20#" 240
+cap "clock" "vss_1" 480
+cap "a_156_20#" "a_148_20#" 1128
+cap "clock" "vss_3" 480
+cap "a_123_n92#" "slp" 240
+cap "vdd_2" "a_156_20#" 1194
+cap "clock" "a_156_20#" 240
+cap "slp" "vdd_2" 15716
+cap "a_156_n72#" "a_148_n72#" 1128
+cap "vss_1" "d" 480
+cap "d_n" "vdd" 752
+cap "slp" "vdd_3" 6988
+cap "a_123_n92#" "vdd_3" 1128
+cap "vdd_2" "out_n" 1194
+cap "out_n" "out" 480
+cap "a_246_n72#" "out_n" 1128
+cap "a_156_n72#" "vdd_4" 1194
+cap "vdd_2" "out" 188
+cap "clock" "vdd_3" 4370
+cap "slp" "a_156_n72#" 240
+cap "slp" "vss_4" 480
+cap "d" "vdd" 5318
+cap "clock" "a_156_n72#" 240
+cap "a_221_n92#" "vdd_4" 1504
+cap "a_156_n72#" "vdd_3" 188
+cap "a_123_0#" "vdd_1" 1504
+cap "vss_4" "out" 480
+device mosfet nfet 258 -103 259 -102 2 12 "Gnd!" "out" 4 0 "a_256_n103#" 12 0 "out_n" 12 0
+device mosfet nfet 254 -103 255 -102 2 12 "Gnd!" "a_156_n72#" 4 0 "a_252_n103#" 12 0 "a_256_n103#" 12 0
+device mosfet nfet 250 -103 251 -102 2 12 "Gnd!" "a_221_n92#" 4 0 "vss_4" 12 0 "a_252_n103#" 12 0
+device mosfet nfet 219 -92 220 -91 2 4 "Gnd!" "slp" 4 0 "vss_4" 4 0 "a_221_n92#" 4 0
+device mosfet nfet 160 -103 161 -102 2 12 "Gnd!" "clock" 4 0 "a_158_n103#" 12 0 "a_156_n72#" 12 0
+device mosfet nfet 156 -103 157 -102 2 12 "Gnd!" "d_n" 4 0 "a_154_n103#" 12 0 "a_158_n103#" 12 0
+device mosfet nfet 152 -103 153 -102 2 12 "Gnd!" "a_123_n92#" 4 0 "vss_3" 12 0 "a_154_n103#" 12 0
+device mosfet nfet 121 -92 122 -91 2 4 "Gnd!" "slp" 4 0 "vss_3" 4 0 "a_123_n92#" 4 0
+device mosfet pfet 260 -72 261 -71 2 16 "vdd_4" "out" 4 0 "out_n" 16 0 "a_246_n72#" 16 0
+device mosfet pfet 252 -72 253 -71 2 16 "vdd_4" "a_156_n72#" 4 0 "a_246_n72#" 16 0 "out_n" 16 0
+device mosfet pfet 244 -72 245 -71 2 16 "vdd_4" "slp" 4 0 "vdd_4" 16 0 "a_246_n72#" 16 0
+device mosfet pfet 219 -72 220 -71 2 8 "vdd_4" "slp" 4 0 "vdd_4" 8 0 "a_221_n92#" 8 0
+device mosfet pfet 162 -72 163 -71 2 16 "vdd_3" "clock" 4 0 "a_156_n72#" 16 0 "a_148_n72#" 16 0
+device mosfet pfet 154 -72 155 -71 2 16 "vdd_3" "d_n" 4 0 "a_148_n72#" 16 0 "a_156_n72#" 16 0
+device mosfet pfet 146 -72 147 -71 2 16 "vdd_3" "slp" 4 0 "vdd_3" 16 0 "a_148_n72#" 16 0
+device mosfet pfet 121 -72 122 -71 2 8 "vdd_3" "slp" 4 0 "vdd_3" 8 0 "a_123_n92#" 8 0
+device mosfet nfet 258 -11 259 -10 2 12 "Gnd!" "out_n" 4 0 "a_256_n11#" 12 0 "out" 12 0
+device mosfet nfet 254 -11 255 -10 2 12 "Gnd!" "a_156_20#" 4 0 "a_252_n11#" 12 0 "a_256_n11#" 12 0
+device mosfet nfet 250 -11 251 -10 2 12 "Gnd!" "a_221_0#" 4 0 "vss_2" 12 0 "a_252_n11#" 12 0
+device mosfet nfet 81 -49 82 -48 2 6 "Gnd!" "d" 4 0 "vss" 6 0 "d_n" 6 0
+device mosfet pfet 81 -31 82 -30 2 12 "vdd" "d" 4 0 "vdd" 12 0 "d_n" 12 0
+device mosfet nfet 219 0 220 1 2 4 "Gnd!" "slp" 4 0 "vss_2" 4 0 "a_221_0#" 4 0
+device mosfet nfet 160 -11 161 -10 2 12 "Gnd!" "clock" 4 0 "a_158_n11#" 12 0 "a_156_20#" 12 0
+device mosfet nfet 156 -11 157 -10 2 12 "Gnd!" "d" 4 0 "a_154_n11#" 12 0 "a_158_n11#" 12 0
+device mosfet nfet 152 -11 153 -10 2 12 "Gnd!" "a_123_0#" 4 0 "vss_1" 12 0 "a_154_n11#" 12 0
+device mosfet nfet 121 0 122 1 2 4 "Gnd!" "slp" 4 0 "vss_1" 4 0 "a_123_0#" 4 0
+device mosfet pfet 260 20 261 21 2 16 "vdd_2" "out_n" 4 0 "out" 16 0 "a_246_20#" 16 0
+device mosfet pfet 252 20 253 21 2 16 "vdd_2" "a_156_20#" 4 0 "a_246_20#" 16 0 "out" 16 0
+device mosfet pfet 244 20 245 21 2 16 "vdd_2" "slp" 4 0 "vdd_2" 16 0 "a_246_20#" 16 0
+device mosfet pfet 219 20 220 21 2 8 "vdd_2" "slp" 4 0 "vdd_2" 8 0 "a_221_0#" 8 0
+device mosfet pfet 162 20 163 21 2 16 "vdd_1" "clock" 4 0 "a_156_20#" 16 0 "a_148_20#" 16 0
+device mosfet pfet 154 20 155 21 2 16 "vdd_1" "d" 4 0 "a_148_20#" 16 0 "a_156_20#" 16 0
+device mosfet pfet 146 20 147 21 2 16 "vdd_1" "slp" 4 0 "vdd_1" 16 0 "a_148_20#" 16 0
+device mosfet pfet 121 20 122 21 2 8 "vdd_1" "slp" 4 0 "vdd_1" 8 0 "a_123_0#" 8 0
+subcap "vss_3" -3384
+subcap "a_156_n72#" -36732
+subcap "d_n" -21316
+subcap "clock" -10394
+subcap "d" -25388
+subcap "vss_4" -2632
+subcap "out_n" -31092
+subcap "vss_1" -3384
+subcap "a_156_20#" -36732
+subcap "slp" -66492
+subcap "vss_2" -2632
+subcap "out" -48576

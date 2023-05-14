@@ -1,0 +1,146 @@
+.include ./65nm_bulk.txt
+
+*defining subcircuits
+.subckt inv inp output vdd
+mi_p output inp vdd vdd cmosp l=65n w=130n
+mi_n output inp 0 0 cmosn l=65n w=260n
+.ends inv
+
+*inverter
+.subckt inv_gate inp slp slp_n output vdd
+m1 a1 slp vdd vdd cmosp l=65n w= 520n
+m2 output inp a1 a1 cmosp l=65n w=520n
+m3 output inp a2 a2 cmosn l=65n w=260n 
+m4 a2 slp_n 0 0 cmosn l=65n w=260n
+*Cdp a1 0 10n
+.ends inv_gate
+
+*and gate
+.subckt and_gate inp1 inp2 slp slp_n output vdd
+mn0 nand2 slp_n 0 0 cmosn l=65n w=390n
+mnA out_n inp1 nand1 nand1 CMOSN l=65n w=390n
+mnB nand1 inp2 nand2 nand2 CMOSN l=65n w=390n
+
+mp0 nand3 slp vdd vdd cmosp l=65n w=520n
+mpA out_n inp1 nand3 nand3 CMOSP l=65n w=520n
+mpB out_n inp2 nand3 nand3 CMOSP l=65n w=520n
+
+Xin out_n slp slp_n output vdd inv_gate
+*Cdp nand3 0 10n
+.ends and_gate
+
+*xor gates
+.subckt xor_gate inA inB slp slp_n out vdd
+mnA out inA ab 0 CMOSN w=390n l=65n
+mnB ab inB x1 x1 CMOSN w=390n l=65n
+mns x1 slp_n 0 0 CMOSN w=390n l=65n
+X1 inA an vdd inv
+X2 inB bn vdd inv
+mnaa out an anbn 0 CMOSN w=390n l=65n
+mnbb anbn bn x1 x1 CMOSN w=390n l=65n
+*pun network
+mpA x inA x2 x2 CMOSP w=780n l=65n
+mpB x inB x2 x2 CMOSP w=780n l=65n
+mpsn x2 slp vdd vdd cmosp w=780n l=65n
+mpaa out an x x CMOSP w=780n l=65n
+mpbb out bn x x CMOSP w=780n l=65n
+*Cdp x2 0 10n
+.ends xor_gate
+
+.subckt clk_gate a,a_n,b,b_n,clk,clk_eff vdd
+mn1 node1 b a 0 CMOSN l=65n w=260n
+mn2 node1 b_n a_n 0 CMOSN l=65n w=260n
+mn3 node2 b a_n 0 CMOSN l=65n w=260n
+mn4 node2 b_n a 0 CMOSN l=65n w=260n
+mp clk node1 clk_eff vdd CMOSP l=65n w=520n
+mn clk_eff node2 clk 0 CMOSN l=65n w=260n
+.ends clk_gate
+
+Xs slp slp_n vdd inv
+
+*d-flip flop
+.subckt dff d clk slp slp_n q q_n vdd 
+*ms s slp vdd vdd CMOSP w=260n l=65n
+*msn sn slp_n 0 0 CMOSN w=130n l=65n
+
+m1 1 d vdd vdd CMOSP w=260n l=65n
+m2 2 clk 1 vdd CMOSP w=260n l=65n
+m3 2 d 0 0 CMOSN w=130n l=65n
+m4 3 clk vdd vdd CMOSP w=260n l=65n
+m5 3 2 4 0 CMOSN w=130n l=65n
+m6 4 clk 0 0 CMOSN w=130n l=65n
+m7 q_n 3 vdd vdd CMOSP w=260n l=65n
+m8 q_n clk 8 0 CMOSN w=1300n l=65n
+m9 8 3 0 0 CMOSN w=130n l=65n
+m10 q q_n vdd vdd CMOSP w=260n l=65n
+m11 q q_n 0 0 CMOSN w=130n l=65n
+.ends dff
+
+*instantiating counter gates
+* 0th flip flop
+Xdf0 q0_n clk slp slp_n q0 q0_n vdd dff 
+
+* 1st flip flop
+Xxor1 q1 q0 slp slp_n d1 vdd xor_gate
+Xi1 d1 d1_n vcc inv
+Xcg1 d1 d1_n q1 q1_n clk clk_eff1 vdd clk_gate 
+Xdf1 d1 clk_eff1 slp slp_n q1 q1_n vdd dff
+
+* 2nd flip flop
+Xand2 q1 q0 slp slp_n c2 vdd and_gate
+Xxor2 q2 c2 slp slp_n d2 vdd xor_gate
+Xi2 d2 d2_n vcc inv
+Xcg2 d2 d2_n q2 q2_n clk_eff1 clk_eff2 vdd clk_gate 
+Xdf2 d2 clk_eff2 slp slp_n q2 q2_n vdd dff
+
+*defining inputs
+v_dd vdd 0 dc 0.9
+v_cc vcc 0 dc 0.9
+v_slp slp 0 dc 0
+v_clk clk 0 pulse (0 0.9 0 0.01n 0.01n 1n 2n)
+*v_slp slp 0 pulse(0.9 0 0 0.1n 0.1n 20n 30n)
+
+.tran 0.1n 30n
+.control 
+run
+meas tran Vmax MAX q2 from=5n to=10n
+meas tran Vmin MIN q2 from=13n to=17n
+
+Let v10 =Vmin + 0.1*(Vmax-Vmin)
+Let v50 =Vmin + 0.5*(Vmax-Vmin)
+Let v90 =Vmin +0.9*(Vmax-Vmin)
+Let   P= -0.9*(v_dd#branch)
+
+
+meas tran trise trig q2 val=v10 rise=1 targ q2 val=v90 rise=1
+meas tran tfall trig q2 val=v90 fall=1 targ q2 val= v10 fall=1
+meas tran p_avg AVG P from=1n to=30n
+*meas tran energy integ P
+meas tran tphl trig clk val=0.45 rise=9 targ q2 val=v50 fall=2
+meas tran tplh trig clk val=0.45 rise=5 targ q2 val=v50 rise=1
+
+Let tp= (tphl+tplh)/2
+
+print tp
+
+plot clk  title clk
+*plot clk_eff1 title clk1
+*plot clk_eff2 title clk2
+*plot clk clk_eff1 clk_eff2 title clocks
+
+plot q0 title dff0
+
+plot q1 title dff1
+plot q2 title dff2
+plot q0 q1 q2 title all_outputs
+plot clk q0 q1 q2 title clk_input_and_output
+*plot clk_eff1 q0 q1
+*plot slp  out title sleep_input_and_output
+
+*plot d1
+*plot c2
+*plot d2
+*plot d2_n
+.endc
+
+.end
